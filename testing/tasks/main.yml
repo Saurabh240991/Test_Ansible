@@ -2,3 +2,7 @@
 - name: debug variable, default to `this is just text`.
   debug:
     msg: "{{ var | default('this is just text') }}"
+
+- name: debug variable, default to another variable, `another_var`.
+  debug:
+    msg: "{{ var | default(another_var) }}"
