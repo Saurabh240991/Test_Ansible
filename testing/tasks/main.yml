@@ -1,3 +1,6 @@
 ---
     - include: b.yml
       with_items: "{{ facter_blockdevices.split(',') }}"
+      loop_control:
+        loop_var: test1
+
