@@ -1,2 +1,2 @@
 ---
-- debug: msg="{{topvars}} from bottom"
+- debug: msg="{{test1}} values"
