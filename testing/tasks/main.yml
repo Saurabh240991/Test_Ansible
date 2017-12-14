@@ -1,4 +1,3 @@
 ---
-    - name: Let's split
-      debug: var=item
+    - include: b.yml
       with_items: "{{ facter_blockdevices.split(',') }}"
