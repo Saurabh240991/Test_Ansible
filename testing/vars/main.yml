@@ -1,6 +1,2 @@
 ---
-    names:
-      - first: Paul
-        last: Thompson
-      - first: Rod
-        last: Johnson
+facter_blockdevices: "sda,sdb,sdc,sdd,sde,sdf"
