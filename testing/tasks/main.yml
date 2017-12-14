@@ -1,0 +1,5 @@
+---
+    - debug: msg={{ names | map(attribute='first') | list }}
+    - debug: msg={{ names | map(attribute='last') | list }}
+    - debug: msg={{ names | map('upper') | list }}
+    - debug: msg={{ names | map(attribute='last') | map('upper') | list }}
