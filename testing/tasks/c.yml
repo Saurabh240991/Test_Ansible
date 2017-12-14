@@ -1,2 +1,2 @@
 ---
-- debug: msg="{{items}} vaules in loop" 
+- debug: msg="{{test1}} vaules in loop" 
