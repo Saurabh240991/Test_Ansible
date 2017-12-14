@@ -1,4 +1,4 @@
 ---
-- name: debug variable, default to another variable.
-  debug:
-    msg: "{{ var | default(another_var) }}"
+    - name: Let's split
+      debug: var=item
+      with_items: "{{ facter_blockdevices.split(',') }}"
