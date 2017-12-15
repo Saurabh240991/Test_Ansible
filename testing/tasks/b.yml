@@ -1,3 +1,6 @@
 ---
 - debug: msg="{{test1}} values"
 - include: c.yml
+  with_items: "{{ test1.split(',') }}"
+  loop_control:
+    loop_var: test2
