@@ -1,6 +1,13 @@
 ---
+- block:
     - include: b.yml
       with_items: "{{ facter_blockdevices.split(',') }}"
       loop_control:
         loop_var: test1
+  when: facter_blockdevices != "all"
+  
+- block:
+    - debug: msg=" Test the block" 
+  when: facter_blockdevices == "all"
+
 

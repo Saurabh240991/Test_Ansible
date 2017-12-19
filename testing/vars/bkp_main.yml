@@ -1,0 +1,2 @@
+---
+facter_blockdevices: "sda:123,sdb,sdc,sdd,sde,sdf:123423"
