@@ -1,0 +1,16 @@
+---
+
+- block:
+    - name: variable testing 
+      set_fact: 
+        x: "{{ test1.split(':')[0] }}"
+        y: "{{ test1.split(':')[1] }}"
+    - debug: msg=" Service values is {{ x }} and Code Values is {{ y }}"
+  when: "':' in test1 "
+  
+- block:
+    - debug: msg=" Service Values is {{ test1 }} "
+  when: "':' not in test1 "
+
+ 
+  
