@@ -1,2 +1,30 @@
 ---
-- debug: msg="{{test1}} values and {{test2}} Values"
+- name: varaible 
+  set_fact:
+    code:  "{{test2}}"
+
+- name: varaible 
+  set_fact:
+    service:  "{{test1 | replace(':' + test2, '')}}"
+
+- name: fact varaible  
+  set_fact:
+    code: "{{ '' if (test2 == service) else code }}"
+
+- debug: 
+    msg: " Code Values {{code}}"
+
+- debug: 
+    msg: " Service Values {{service}}"
+
+
+- debug: msg=" Service Values is {{service}} and  code is {{ code }}"
+  when:
+    - service != ""
+    - code == ''
+ 
+- debug: msg=" Service Values is {{service}} and  code is {{ code }}"
+  when:
+    - service != ""
+    - code != ''
+
